@@ -1,11 +1,9 @@
-package exercicio1;
-
+//Classe 1:
 public class Conta{
 	// abaixo tem umas funções só pra completar o pensamento
 	String Cliente;
 	int nrConta;
-	double Saldo;
-	
+	double Saldo;	
 	String getCliente() {
 		return Cliente;
 	};
@@ -18,10 +16,8 @@ public class Conta{
 	double getSaldo() {
 		return Saldo;
 	};
-	
 	void sacar(double valor) {
-		Saldo = (Saldo - valor);
-		
+		Saldo = (Saldo - valor);	
 	};
 	void debitar(double valor) {
 		Saldo = (Saldo - valor);
@@ -32,14 +28,38 @@ public class Conta{
 	void depositar(double valor) {
 		Saldo = (Saldo + valor);
 	};
-			
-	
-	void transferir() {
-		
+	void transferir() {	
 	};
-	
-	void abrirConta() {
-		
+	void abrirConta() {	
 	};
-	
+}
+
+//Classe 2:
+public class ContaEspecial extends Conta {
+		double limite;
+		// abaixo tem umas funções só pra completar o pensamento
+		void setLimite(double numSet) {
+			limite = numSet;
+		};
+		double getLimite() {
+			return limite;
+		};
+		void abrirConta() {	
+		};
+}
+
+//Classe 3:
+public class ContaPoupança extends Conta {
+		double txCorrecao;
+		// abaixo tem umas funções só pra completar o pensamento
+		double getTaxaCorrecao() {
+			return txCorrecao;
+		};
+		void setTaxaCorrecao(double txSet) {
+			txCorrecao = txSet;
+		};
+		void atualizaSaldoRendimento() {	
+		};
+		void abrirConta() { 
+		};
 }
